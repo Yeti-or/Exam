@@ -13,6 +13,7 @@
 
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/students.css">
         <!-- endbuild -->
 </head>
   <body ng-app="SHRIApp">
@@ -27,12 +28,14 @@
 
     <!-- Add your site or application content here -->
     <div class="container" ng-view=""></div>
+    <div ui-view=""></div>
 
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
 
         <!-- build:js scripts/modules.js -->
         <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
