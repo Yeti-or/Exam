@@ -1,13 +1,12 @@
 'use strict';
 
-angular.module('SHRIApp', [])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
+var app = angular.module('SHRIApp', ['ngResource']);
+
+app.config(function ($routeProvider) {
+    $routeProvider .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-      })
-      .otherwise({
+    }).otherwise({
         redirectTo: '/'
-      });
-  });
+    });
+});

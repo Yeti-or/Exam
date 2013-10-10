@@ -1,10 +1,12 @@
 'use strict';
 
-angular.module('SHRIApp')
-  .controller('MainCtrl', function ($scope) {
+app.controller('MainCtrl', function (Students,$scope) {
+    Students.query(function(data){
+        $scope.students = data;
+    });
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  });
+});
