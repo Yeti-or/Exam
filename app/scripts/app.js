@@ -8,6 +8,11 @@ app.config(function ($stateProvider) {
             url:'/students',
             templateUrl:'views/students.html',
             controller: 'StudentsCtrl'
+        })
+        .state('student',{
+            url:'/students/:studentId',
+            templateUrl:'views/student.html',
+            controller: 'StudentCtrl'
         });
 });
 

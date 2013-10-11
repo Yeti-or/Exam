@@ -1,13 +1,21 @@
+
 li.students{
     list-style:none;
-    padding:10px;
-    background-color:#abcabc;
     margin:10px;
     border: 1px solid gray;
 
 }
 
-.student span{
+.students .student{
+    cursor: pointer;
+}
+
+.student{
+    background-color:#abcabc;
+    padding:10px;
+}
+
+.student span.circle-img{
     height: 100px;
     width:100px;
     display: inline-block;
@@ -19,4 +27,3 @@ li.students{
     background-size:cover;
     background-position: 50% 20%;
 }
-
