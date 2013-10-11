@@ -21,9 +21,14 @@ li.students{
     display: inline-block;
 
     border-radius:50%;
-    border: 1px solid gray;
 
     background-repeat:no-repeat;
     background-size:cover;
     background-position: 50% 20%;
+
+    box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 3px 4px rgba(0,0,0,.3), inset 0 1px 0 rgba(0,0,0,.4);
+}
+
+.student h3:first-letter{
+    color:red;
 }
