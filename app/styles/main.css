@@ -20,3 +20,30 @@ body {
     line-height: 1;
     letter-spacing: -1px;
 }
+
+.btn:hover,
+.btn:focus {
+    background-color: #9b59b6;
+    text-decoration: none;
+    outline-offset: -2px;
+    color:white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #bdc3c7;
+}
+.btn:active{
+    background-image: none;
+    outline: 0;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}

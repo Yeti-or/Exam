@@ -32,3 +32,22 @@ li.students{
 .student h3:first-letter{
     color:red;
 }
+
+.student a{
+    float:right;
+}
+
+.student-navigation{
+    padding:10px;
+    position: relative;
+}
+
+.student-navigation a{
+    color:#0088cc;
+    cursor: pointer;
+    position:absolute;
+}
+
+.student-navigation .nav-next{
+    right: 10px;
+}
