@@ -83,6 +83,7 @@ module.exports = function (grunt) {
       },
       test: {
         options: {
+          port: 9090,
           middleware: function (connect) {
             return [
               mountFolder(connect, '.tmp'),
@@ -288,6 +289,10 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'karma.conf.js',
         singleRun: true
+      },
+      e2e: {
+        configFile: 'karma-e2e.conf.js',
+        singleRun: true
       }
     },
     cdnify: {
@@ -337,6 +342,13 @@ module.exports = function (grunt) {
     'autoprefixer',
     'connect:test',
     'karma'
+  ]);
+  grunt.registerTask('test:e2e', [
+    'clean:server',
+    'concurrent:test',
+    'autoprefixer',
+    'connect:test',
+    'karma:e2e'
   ]);
 
   grunt.registerTask('build', [
