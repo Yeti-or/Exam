@@ -15,6 +15,8 @@ app.controller('StudentCtrl',function(Students,$scope,$state,$stateParams){
 
     Students.query(function(data){
         $scope.student = data[index];
+        $scope.firstOne = (index == 0) || !$scope.student;
+        $scope.lastOne = (index == data.length - 1) || !$scope.student;
     });
 
     $scope.nextOne = function(){
