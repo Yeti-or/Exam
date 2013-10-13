@@ -297,11 +297,19 @@ module.exports = function (grunt) {
     karma: {
       unit: {
         configFile: 'karma.conf.js',
+        autoWatch: false,
         singleRun: true
       },
       e2e: {
         configFile: 'karma-e2e.conf.js',
+        autoWatch: false,
         singleRun: true
+      },
+      unit_auto: {
+        configFile: 'karma.conf.js',
+      },
+      e2e_auto: {
+        configFile: 'karma-e2e.conf.js',
       }
     },
     cdnify: {
@@ -358,12 +366,28 @@ module.exports = function (grunt) {
     'karma:unit'
   ]);
 
+  grunt.registerTask('test:unit_auto', [
+    'clean:server',
+    'concurrent:test',
+    'autoprefixer',
+    'connect:test',
+    'karma:unit_auto'
+  ]);
+
   grunt.registerTask('test:e2e', [
     'clean:server',
     'concurrent:test',
     'autoprefixer',
     'connect:e2e',
     'karma:e2e'
+  ]);
+
+  grunt.registerTask('test:e2e_auto', [
+    'clean:server',
+    'concurrent:test',
+    'autoprefixer',
+    'connect:e2e',
+    'karma:e2e_auto'
   ]);
 
   grunt.registerTask('build', [
