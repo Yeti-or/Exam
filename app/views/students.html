@@ -1,0 +1,10 @@
+<h1>Hello students: {{students.length}}</h1>
+<ul>
+    <li class="students" ng-repeat="student in students">
+        <div class="student" ng-click="showStudent($index)">
+            <span class="circle-img" back-img-src="{{student.link_photo}}"></span>
+            <h3>{{student.last_name + " " + student.first_name}}</h3>
+        </div>
+    </li>
+</ul>
+
