@@ -21,6 +21,10 @@ body {
     letter-spacing: -1px;
 }
 
+.container{
+    margin:50px 0;
+}
+
 .btn:hover,
 .btn:focus {
     background-color: #9b59b6;
