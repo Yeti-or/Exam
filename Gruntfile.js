@@ -83,11 +83,22 @@ module.exports = function (grunt) {
       },
       test: {
         options: {
-          port: 9090,
+          port: 9999,
           middleware: function (connect) {
             return [
               mountFolder(connect, '.tmp'),
               mountFolder(connect, 'test')
+            ];
+          }
+        }
+      },
+      e2e: {
+        options: {
+          port: 9090,
+          middleware: function (connect) {
+            return [
+              mountFolder(connect, '.tmp'),
+              mountFolder(connect, yeomanConfig.app)
             ];
           }
         }
@@ -335,17 +346,23 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('test', [
+    'test:unit',
+    'test:e2e'
+  ]);
+
+  grunt.registerTask('test:unit', [
     'clean:server',
     'concurrent:test',
     'autoprefixer',
     'connect:test',
-    'karma'
+    'karma:unit'
   ]);
+
   grunt.registerTask('test:e2e', [
     'clean:server',
     'concurrent:test',
     'autoprefixer',
-    'connect:test',
+    'connect:e2e',
     'karma:e2e'
   ]);
 
