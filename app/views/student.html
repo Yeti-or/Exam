@@ -1,11 +1,6 @@
 <h1>Hello student</h1>
-<div class="student">
-    <a class="external" href="{{student.link_gihub}}">github</a>
-    <span class="circle-img" back-img-src="{{student.link_photo}}"></span>
-    <h3>{{student.last_name + " " + student.first_name}}</h3>
-    {{student.about}}
-</div>
+<div student="student"></div>
 <div class="student-navigation">
-    <a class="nav-prev btn" ng-click="prevOne()">Previous</a>
-    <a class="nav-next btn" ng-click="nextOne()">Next</a>
+    <a class="nav-prev btn" ng-click="prevOne()" ng-hide="firstOne">Previous</a>
+    <a class="nav-next btn" ng-click="nextOne()" ng-hide="lastOne">Next</a>
 </div>
