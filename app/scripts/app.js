@@ -2,7 +2,7 @@
 
 var app = window.app = angular.module('SHRIApp', ['ngResource','ui.router']);
 
-app.config(function ($stateProvider,$urlRouterProvider) {
+app.config(['$stateProvider','$urlRouterProvider',function ($stateProvider,$urlRouterProvider) {
     $urlRouterProvider.otherwise('students');
     $stateProvider.state('students', {
         url:'/students',
@@ -14,4 +14,4 @@ app.config(function ($stateProvider,$urlRouterProvider) {
         controller: 'StudentCtrl'
     });
 
-});
+}]);
