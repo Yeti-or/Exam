@@ -39,7 +39,7 @@ span.circle-img.not-found{
     color:red;
 }
 
-.student a{
+.student .external{
     float:right;
 }
 
