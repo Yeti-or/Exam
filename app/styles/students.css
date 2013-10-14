@@ -33,6 +33,7 @@ span.circle-img.not-found{
     background-size: 50px;
     background-position: 25px 20px;
     background-color: white;
+    background-image: url(img/questionMark.png);
 }
 
 .student h3:first-letter{

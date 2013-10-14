@@ -15,7 +15,6 @@ window.app.directive('student',function(){
             },function(newVal,oldVal){
                 if(oldVal !== newVal && !newVal){
                     scope.student = {
-                        'link_photo' : '/styles/img/questionMark.png',
                         about : 'Нет такого студента, может быть это ты?'
                     };
                     element.find('span').addClass('not-found');
