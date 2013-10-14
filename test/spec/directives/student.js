@@ -19,12 +19,26 @@ describe('directive student', function(){
         return element;
     };
 
+    it('should render student div', function(){
+        var element = compileEl($scope);
+        expect(element.hasClass('student')).toBe(true);
+        expect(element.find('.circle-img').length).toBe(1);
+    });
+
     it('should display student name', function(){
+        var element = compileEl($scope);
         $scope.student = {
             last_name : 'Harrison',
             first_name : 'Ford'
         };
-        var element = compileEl($scope);
+        $scope.$digest();
         expect(element.html()).toMatch('Harrison Ford');
+    });
+
+    it('should show not-found img when student is null', function(){
+        var element = compileEl($scope);
+        $scope.student = undefined;
+        $scope.$digest();
+        expect(element.find('.circle-img').hasClass('not-found')).toBe(true);
     });
 });
